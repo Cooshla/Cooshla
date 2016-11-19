@@ -7,7 +7,7 @@ using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
-[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly: PureLiveAssembly, System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -369,6 +369,573 @@ namespace Umbraco.Web.PublishedContentModels
 		public string WorkImage
 		{
 			get { return this.GetPropertyValue<string>("workImage"); }
+		}
+	}
+
+	/// <summary>Anthem Home</summary>
+	[PublishedContentModel("anthemHome")]
+	public partial class AnthemHome : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemHome";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemHome(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemHome, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Blog Posts
+		///</summary>
+		[ImplementPropertyType("blogPosts")]
+		public string BlogPosts
+		{
+			get { return this.GetPropertyValue<string>("blogPosts"); }
+		}
+
+		///<summary>
+		/// Projects
+		///</summary>
+		[ImplementPropertyType("projects")]
+		public string Projects
+		{
+			get { return this.GetPropertyValue<string>("projects"); }
+		}
+
+		///<summary>
+		/// Section 2 Description
+		///</summary>
+		[ImplementPropertyType("section2Description")]
+		public string Section2Description
+		{
+			get { return this.GetPropertyValue<string>("section2Description"); }
+		}
+
+		///<summary>
+		/// Section 2 Folio Text
+		///</summary>
+		[ImplementPropertyType("section2FolioText")]
+		public string Section2FolioText
+		{
+			get { return this.GetPropertyValue<string>("section2FolioText"); }
+		}
+
+		///<summary>
+		/// Section 2 Header
+		///</summary>
+		[ImplementPropertyType("section2Header")]
+		public string Section2Header
+		{
+			get { return this.GetPropertyValue<string>("section2Header"); }
+		}
+
+		///<summary>
+		/// Section 2 subheader
+		///</summary>
+		[ImplementPropertyType("section2Subheader")]
+		public string Section2Subheader
+		{
+			get { return this.GetPropertyValue<string>("section2Subheader"); }
+		}
+
+		///<summary>
+		/// Service 1 Content
+		///</summary>
+		[ImplementPropertyType("service1Content")]
+		public IHtmlString Service1Content
+		{
+			get { return this.GetPropertyValue<IHtmlString>("service1Content"); }
+		}
+
+		///<summary>
+		/// Service 1 Header
+		///</summary>
+		[ImplementPropertyType("service1Header")]
+		public string Service1Header
+		{
+			get { return this.GetPropertyValue<string>("service1Header"); }
+		}
+
+		///<summary>
+		/// Service 2 Content
+		///</summary>
+		[ImplementPropertyType("service2Content")]
+		public IHtmlString Service2Content
+		{
+			get { return this.GetPropertyValue<IHtmlString>("service2Content"); }
+		}
+
+		///<summary>
+		/// Service 2  Header
+		///</summary>
+		[ImplementPropertyType("service2Header")]
+		public string Service2Header
+		{
+			get { return this.GetPropertyValue<string>("service2Header"); }
+		}
+
+		///<summary>
+		/// Service 3 Content
+		///</summary>
+		[ImplementPropertyType("service3Content")]
+		public IHtmlString Service3Content
+		{
+			get { return this.GetPropertyValue<IHtmlString>("service3Content"); }
+		}
+
+		///<summary>
+		/// Service 3 Header
+		///</summary>
+		[ImplementPropertyType("service3Header")]
+		public string Service3Header
+		{
+			get { return this.GetPropertyValue<string>("service3Header"); }
+		}
+
+		///<summary>
+		/// Slide 1
+		///</summary>
+		[ImplementPropertyType("slide1")]
+		public string Slide1
+		{
+			get { return this.GetPropertyValue<string>("slide1"); }
+		}
+
+		///<summary>
+		/// Slide 1 Heading
+		///</summary>
+		[ImplementPropertyType("slide1Heading")]
+		public string Slide1Heading
+		{
+			get { return this.GetPropertyValue<string>("slide1Heading"); }
+		}
+
+		///<summary>
+		/// Slide 1 Link
+		///</summary>
+		[ImplementPropertyType("slide1Link")]
+		public object Slide1Link
+		{
+			get { return this.GetPropertyValue("slide1Link"); }
+		}
+
+		///<summary>
+		/// Slide 1 Subheading
+		///</summary>
+		[ImplementPropertyType("slide1Subheading")]
+		public string Slide1Subheading
+		{
+			get { return this.GetPropertyValue<string>("slide1Subheading"); }
+		}
+
+		///<summary>
+		/// Slide 2
+		///</summary>
+		[ImplementPropertyType("slide2")]
+		public string Slide2
+		{
+			get { return this.GetPropertyValue<string>("slide2"); }
+		}
+
+		///<summary>
+		/// Slide 2 Heading
+		///</summary>
+		[ImplementPropertyType("slide2Heading")]
+		public string Slide2Heading
+		{
+			get { return this.GetPropertyValue<string>("slide2Heading"); }
+		}
+
+		///<summary>
+		/// Slide 2 Link
+		///</summary>
+		[ImplementPropertyType("slide2Link")]
+		public object Slide2Link
+		{
+			get { return this.GetPropertyValue("slide2Link"); }
+		}
+
+		///<summary>
+		/// Slide 2 Subheading
+		///</summary>
+		[ImplementPropertyType("slide2Subheading")]
+		public string Slide2Subheading
+		{
+			get { return this.GetPropertyValue<string>("slide2Subheading"); }
+		}
+
+		///<summary>
+		/// Slide 3
+		///</summary>
+		[ImplementPropertyType("slide3")]
+		public string Slide3
+		{
+			get { return this.GetPropertyValue<string>("slide3"); }
+		}
+
+		///<summary>
+		/// Slide 3 Heading
+		///</summary>
+		[ImplementPropertyType("slide3Heading")]
+		public string Slide3Heading
+		{
+			get { return this.GetPropertyValue<string>("slide3Heading"); }
+		}
+
+		///<summary>
+		/// Slide 3 Link
+		///</summary>
+		[ImplementPropertyType("slide3Link")]
+		public object Slide3Link
+		{
+			get { return this.GetPropertyValue("slide3Link"); }
+		}
+
+		///<summary>
+		/// Slide 3 Subheading
+		///</summary>
+		[ImplementPropertyType("slide3Subheading")]
+		public string Slide3Subheading
+		{
+			get { return this.GetPropertyValue<string>("slide3Subheading"); }
+		}
+	}
+
+	/// <summary>Anthem Master</summary>
+	[PublishedContentModel("anthemMaster")]
+	public partial class AnthemMaster : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemMaster";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemMaster(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemMaster, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// ContactEmail
+		///</summary>
+		[ImplementPropertyType("contactEmail")]
+		public string ContactEmail
+		{
+			get { return this.GetPropertyValue<string>("contactEmail"); }
+		}
+
+		///<summary>
+		/// Facebook
+		///</summary>
+		[ImplementPropertyType("facebook")]
+		public string Facebook
+		{
+			get { return this.GetPropertyValue<string>("facebook"); }
+		}
+
+		///<summary>
+		/// FooterBlurb
+		///</summary>
+		[ImplementPropertyType("footerBlurb")]
+		public string FooterBlurb
+		{
+			get { return this.GetPropertyValue<string>("footerBlurb"); }
+		}
+
+		///<summary>
+		/// GooglePlus
+		///</summary>
+		[ImplementPropertyType("googlePlus")]
+		public string GooglePlus
+		{
+			get { return this.GetPropertyValue<string>("googlePlus"); }
+		}
+
+		///<summary>
+		/// LinkedIn
+		///</summary>
+		[ImplementPropertyType("linkedIn")]
+		public string LinkedIn
+		{
+			get { return this.GetPropertyValue<string>("linkedIn"); }
+		}
+
+		///<summary>
+		/// PhoneNumber
+		///</summary>
+		[ImplementPropertyType("phoneNumber")]
+		public string PhoneNumber
+		{
+			get { return this.GetPropertyValue<string>("phoneNumber"); }
+		}
+
+		///<summary>
+		/// Twitter
+		///</summary>
+		[ImplementPropertyType("twitter")]
+		public string Twitter
+		{
+			get { return this.GetPropertyValue<string>("twitter"); }
+		}
+	}
+
+	/// <summary>Anthem Portfolio</summary>
+	[PublishedContentModel("anthemPortfolio")]
+	public partial class AnthemPortfolio : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemPortfolio";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemPortfolio(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemPortfolio, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("description")]
+		public string Description
+		{
+			get { return this.GetPropertyValue<string>("description"); }
+		}
+
+		///<summary>
+		/// Preview Image
+		///</summary>
+		[ImplementPropertyType("previewImage")]
+		public string PreviewImage
+		{
+			get { return this.GetPropertyValue<string>("previewImage"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
+		}
+	}
+
+	/// <summary>Anthem Portfolio Details</summary>
+	[PublishedContentModel("anthemPortfolioDetails")]
+	public partial class AnthemPortfolioDetails : AnthemPortfolio
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemPortfolioDetails";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemPortfolioDetails(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemPortfolioDetails, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Anthem Blog Page</summary>
+	[PublishedContentModel("anthemBlogPage")]
+	public partial class AnthemBlogPage : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemBlogPage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemBlogPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemBlogPage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Anthem Blog Details</summary>
+	[PublishedContentModel("blogDetails")]
+	public partial class BlogDetails : AnthemBlogPage
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "blogDetails";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public BlogDetails(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogDetails, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("description")]
+		public string Description
+		{
+			get { return this.GetPropertyValue<string>("description"); }
+		}
+
+		///<summary>
+		/// Preview Image
+		///</summary>
+		[ImplementPropertyType("previewImage")]
+		public string PreviewImage
+		{
+			get { return this.GetPropertyValue<string>("previewImage"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
+		}
+	}
+
+	/// <summary>Anthem - About Us</summary>
+	[PublishedContentModel("anthemAboutUs")]
+	public partial class AnthemAboutUs : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemAboutUs";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemAboutUs(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemAboutUs, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Anthem - Services</summary>
+	[PublishedContentModel("anthemServices")]
+	public partial class AnthemServices : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemServices";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemServices(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemServices, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Anthem - Contact Us</summary>
+	[PublishedContentModel("anthemContactUs")]
+	public partial class AnthemContactUs : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "anthemContactUs";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public AnthemContactUs(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemContactUs, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 	}
 

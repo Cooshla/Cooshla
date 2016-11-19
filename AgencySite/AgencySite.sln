@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgencySite", "AgencySite.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgencySite.Tests", "AgencySite.Tests\AgencySite.Tests.csproj", "{7063F6BA-22BF-44E4-86F7-4F49012289A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{EF55FE4C-3FE0-498C-ABD7-AB9C6B05C4AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignFiles", "..\DesignFiles\DesignFiles.csproj", "{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,14 @@ Global
 		{7063F6BA-22BF-44E4-86F7-4F49012289A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7063F6BA-22BF-44E4-86F7-4F49012289A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7063F6BA-22BF-44E4-86F7-4F49012289A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF} = {EF55FE4C-3FE0-498C-ABD7-AB9C6B05C4AE}
 	EndGlobalSection
 EndGlobal

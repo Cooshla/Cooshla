@@ -1,0 +1,379 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "AnthemThemeTopMaster.cshtml";
+}
+
+<!-- first block -->
+		<div class="first-block">
+		</div>
+		<!-- superslides -->
+		<section class="home-slider">
+		<!-- begin home slideshow -->
+		<div id="slides" class="home">
+		
+                
+
+			<ul class="slides-container">
+				<!-- first slide -->
+				<li>
+				<!-- slide background image -->
+				<img src="@Umbraco.Media(CurrentPage.Slide1).Url" alt="">
+				<div class="black-tint">
+				</div>
+				<div class="slide-caption dark text-center">
+					<!-- add class do-fade to apply fade animation on scroll -->
+					<div class="row large do-fade">
+						<h1 class="bold large-font">@CurrentPage.Slide1Heading</h1>
+						<h2>@CurrentPage.Slide1Subheading</h2>
+						<div class="midtoppadding">
+							<a href="~/our-work" class="white line-button"><span>Read More</span></a>
+						</div>
+					</div>
+				</div>
+				</li>
+
+
+
+				<!-- second slide -->
+				<li>
+				<!-- slide background image -->
+				<img src="@Umbraco.Media(CurrentPage.Slide2).Url" alt="">
+				<div class="slide-caption dark">
+					<!-- add class do-fade to apply fade animation on scroll -->
+					<div class="row large text-center do-fade">
+						<h1 class="block-heading">@CurrentPage.Slide2Heading</h1>
+						<div class="eight columns centered">
+                            <h2>@CurrentPage.Slide2Subheading</h2>
+							<div class="midtoppadding">
+								<a href="~/about-us" class="white line-button"><span>READ ABOUT US</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</li>
+				<!-- third slide -->
+				<li>
+					<!-- slide background image -->
+					<img src="@Umbraco.Media(CurrentPage.Slide3).Url" alt="">
+					<div class="black-tint">
+					</div>
+					<div class="slide-caption dark">
+						<!-- add class do-fade to apply fade animation on scroll -->
+						<div class="row large text-center do-fade">
+							<h1 class="block-heading">@CurrentPage.Slide3Heading</h1>
+							<div class="eight columns centered">
+                                <h2>@CurrentPage.Slide2Subheading</h2>
+								<div class="midtoppadding">
+									<a href="~/services" class="white line-button"><span>VIEW OUR SERVICES</span></a>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</li>
+
+
+				</ul>
+                }
+				<!-- slideshow direction nav -->
+				<nav class="slides-navigation">
+				<a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
+				<a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
+				</nav>
+			</div>
+			</section>
+			<!-- home-slider -->
+			<!-- section background color -->
+			<div class="white">
+				<!-- first section / info -->
+				<section class="content-block">
+				<div class="row content-heading text-center">
+					<h6>@CurrentPage.section2Header</h6>
+					<h3>@CurrentPage.section2Subheader</h3>
+					<span class="border"></span>
+				</div>
+				<div class="row">
+					<div class="ten columns centered text-center">
+						<p class="intro">
+                            @CurrentPage.section2Description
+						</p>
+					</div>
+				</div>
+				</section>
+				<!--second section / projects -->
+				<section class="work">
+				<!-- begin projects -->
+				<ul class="grid times-four alt" id="projects">
+
+                    @{
+                        var bannerList = CurrentPage.projects.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                        var bannerCollection = Umbraco.Content(bannerList);
+                        
+                            foreach (var item in bannerCollection)
+                            {
+
+    
+                            <li class="grid-item">
+                                <div class="grid-project">
+                                    <!-- project image -->
+                                    <div class="img-box">
+                                        <img src="@Umbraco.Media(item.previewImage).Url" alt="project" class="zoom-on-hover">
+                                    </div>
+                                    <!-- view more link -->
+                                    <a href="@item.Url">
+                                        <!-- project info -->
+                                        <div class="project-info">
+                                            <h1 class="grid-title">@item.Title</h1>
+                                            <h6 class="project-cat">@item.Description</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+
+                        }
+
+                    }
+
+                    
+					<!-- project -->
+					
+
+
+				</ul>
+				<!-- clear floats -->
+				<div class="clear">
+				</div>
+				</section>
+				<!-- call to acton block -->
+				<div class="action-block purple">
+					<div class="row">
+						<div class="twelve columns text-center">
+							<h3 class="white-text">@CurrentPage.section2FolioText <a href="our-work" class="white line-button"><span>View All Work</span></a>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<!-- third section / icon s-->
+				<section class="content-block">
+				<div class="row large">
+					<!-- icon block one -->
+					<div class="four columns">
+						<!-- add class icon-side to display icon on the side -->
+						<div class="icon-block icon-side">
+							<div class="icon">
+								<i class="fa fa-desktop"></i>
+							</div>
+							<div class="icon-info">
+								<h5 class="bold">@CurrentPage.Service1Header</h5>
+								@CurrentPage.Service1Content
+							</div>
+						</div>
+					</div>
+					<!-- icon block two -->
+					<div class="four columns">
+						<!-- add class icon-side to display icon on the side -->
+						<div class="icon-block icon-side">
+							<div class="icon">
+								<i class="fa fa-pencil"></i>
+							</div>
+							<div class="icon-info">
+                                <h5 class="bold">@CurrentPage.Service2Header</h5>
+                                @CurrentPage.Service2Content
+							</div>
+						</div>
+					</div>
+					<!-- icon block three -->
+					<div class="four columns">
+						<!-- add class icon-side to display icon on the side -->
+						<div class="icon-block icon-side">
+							<div class="icon">
+								<i class="fa fa-flag"></i>
+							</div>
+							<div class="icon-info">
+                                <h5 class="bold">@CurrentPage.Service3Header</h5>
+                                @CurrentPage.Service3Content
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+			</div>
+			<!-- Equal height section -->
+			<!-- use class .equals to make children li equal height -->
+			@*<section class="equals">
+			<ul class="grid times-two">
+				<!-- first half -->
+				<!-- add class .do-equal to each li that has to be equal height -->
+				<li class="one-half do-equal">
+				<div class="content-block grey">
+					<div>
+						<h2 class="block-heading small">OUR 3 STEP METHOD</h2>
+						<span class="border"></span>
+					</div>
+					<!-- step 1 -->
+					<div class="method-field">
+						<div class="method-number">
+							<span class="droid-font">01</span>
+						</div>
+						<!-- method detail -->
+						<div class="method-detail">
+							<h5>DISCUSS IDEAS</h5>
+							<h6>LOREM IPSUM DOLOR SIT AMET.</h6>
+							<p>
+								 At this point I can no longer avoid giving a first, provisional statement of my own hypothesis concerning the origin of the “bad conscience”.
+							</p>
+						</div>
+					</div>
+					<!-- step 2 -->
+					<div class="method-field">
+						<div class="method-number">
+							<span class="droid-font">02</span>
+						</div>
+						<!-- method detail -->
+						<div class="method-detail">
+							<h5>DEVELOP CONCEPTS</h5>
+							<h6>LOREM IPSUM DOLOR SIT AMET.</h6>
+							<p>
+								 At this point I can no longer avoid giving a first, provisional statement of my own hypothesis concerning the origin of the “bad conscience”.
+							</p>
+						</div>
+					</div>
+					<!-- step 3 -->
+					<div class="method-field">
+						<div class="method-number">
+							<span class="droid-font">03</span>
+						</div>
+						<!-- method detail -->
+						<div class="method-detail">
+							<h5>PRESENT SOLUTIONS</h5>
+							<h6>LOREM IPSUM DOLOR SIT AMET.</h6>
+							<p>
+								 At this point I can no longer avoid giving a first, provisional statement of my own hypothesis concerning the origin of the “bad conscience”.
+							</p>
+						</div>
+					</div>
+				</div>
+				</li>
+				<!-- second half -->
+				<!-- add class .do-equal to each li that has to be equal height -->
+				<li class="one-half do-equal">
+				<div class="content-block black dark">
+					<div>
+						<h2 class="block-heading small">WHY CHOOSE US</h2>
+						<span class="border"></span>
+					</div>
+					<p>
+						<span class="first-letter">A</span>t this point I can no longer avoid giving a first, provisional statement of my own hypothesis concerning the origin of the “bad conscience”: it may sound rather strange and needs to be pondered, lived with, and slept on for a long time.
+					</p>
+					<!-- icon list -->
+					<ul class="icon-list">
+						<!-- first li item -->
+						<li>
+						<i class="fa fa-heart red-text"></i>
+						<div class="list-info">
+							<h6>BUILT WITH LOVE</h6>
+							<p>
+								 Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+							</p>
+						</div>
+						</li>
+						<!-- second li item -->
+						<li><i class="fa fa-thumbs-up green-text"></i>
+						<div class="list-info">
+							<h6>EASY TO USE</h6>
+							<p>
+								 Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+							</p>
+						</div>
+						</li>
+						<!-- third li item -->
+						<li><i class="fa fa-bolt blue-text"></i>
+						<div class="list-info">
+							<h6>MAKE AN IMPRESSION</h6>
+							<p>
+								 Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+							</p>
+						</div>
+						</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			<!-- clear floats -->
+			<div class="clear">
+			</div>
+			</section>*@
+
+
+			<!-- Recent Post Section -->
+			<section class="recent-posts">
+			<div class="content-block white">
+				<!-- section heading -->
+				<div class="row content-heading text-center">
+					<h6>FROM OUR BLOG</h6>
+					<h3>WHAT WE ARE TALKING ABOUT</h3>
+					<span class="border"></span>
+				</div>
+				<div class="row large">
+					<!-- begin posts -->
+					<ul class="grid times-three basic" id="posts">
+						<!-- first post -->
+
+                        @{
+                            var BlogList = CurrentPage.blogPosts.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                            var BlogCollection = Umbraco.Content(BlogList);
+
+                            foreach (var item in BlogCollection)
+                            {
+                                <li class="grid-item">
+                                    <div class="grid-post">
+                                        <!-- project image -->
+                                        <div class="img-box">
+                                            <img src="@Umbraco.Media(item.previewImage).Url" alt="project" class="zoom-on-hover">
+                                            <div class="icon-box">
+                                                <a class="do_popup" rel="prettyPhoto[pp_gal]" href="@Umbraco.Media(item.previewImage).Url" title="View Larger"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!--blog post info -->
+                                        <div class="post-info">
+                                            <a href="note-single-sidebar.html" title="Read Post">
+                                                <h1 class="grid-title">@item.Title</h1>
+                                            </a>
+                                            <!-- read more button -->
+                                            <a href="@item.Url" class="icon-button">Read More<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            }
+
+                        }
+
+						
+
+					</ul>
+					<div class="clear">
+					</div>
+				</div>
+				<div class="row midtoppadding text-center">
+					<!-- view all posts -->
+					<a href="~/blog" class="black line-button"><span>READ ALL POSTS</span></a>
+				</div>
+			</div>
+			</section>
+			@*<div class="img-section" style="background-image:url(preview/1550px.png);">
+			<div class="content-block black-tint dark">
+				<div class="row text-center">
+					<i class="big fa fa-twitter"></i>
+					<div class="eight columns centered">
+						<div class="tweet">
+						</div>
+					</div>
+					<div class="four columns centered midtoppadding">
+						<a href="#" class="white-text"><span>Username</span></a>
+					</div>
+				</div>
+			</div>
+
+			</div>*@
+			<!-- widgetized footer -->
+			

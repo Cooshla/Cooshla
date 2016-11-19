@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\AgencySite\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\AgencySite\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\AgencySite\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\AgencySite\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF0524A0-A6B0-4F90-B447-3B0D0B24D0FF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignFiles</RootNamespace>
+    <AssemblyName>DesignFiles</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\AgencySite\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\css\gumby.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\css\prism.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\css\style.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\img\gumby_mainlogo%402x.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\img\gumby_mainlogo.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\img\img_silence_demo.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\img\logo.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\index.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\gumby.init.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\gumby.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\gumby.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\jquery-1.10.1.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\jquery-2.0.2.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\jquery.mobile.custom.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\modernizr-2.6.2.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.checkbox.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.fixed.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.navbar.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.radiobtn.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.retina.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.skiplink.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.tabs.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\gumby.toggleswitch.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\ui\jquery.validation.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\main.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\plugins.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\prism.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\about-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\about.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\contact-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\contact.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\fawesome.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\gumby.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\import.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\plugins.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\responsive.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\css\style.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\favicon.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\folio-grid-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\folio-grid.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\folio-single-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\folio-single.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\folio-stripe.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\fontawesome-webfont.svg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\home-two.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\home-work.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\humans.txt" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\big_transparent.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\controls.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\controls2.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_left.cur" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_left.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_left.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_right.cur" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_right.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\cursors\cursor_arrow_right.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\dot.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\loading.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\main-logo%402x.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\main-logo.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\member1.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\member2.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\member3.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\img\stripe.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\index.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\ajax.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\drag.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\jquery.prettyPhoto.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\gumby.init.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\gumby.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\gumby.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery-1.10.2.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery-2.0.2.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery-ui-1.11.0.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery.mobile.custom.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\modernizr-2.6.2.min.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.checkbox.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.fixed.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.navbar.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.radiobtn.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.retina.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.skiplink.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.tabs.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\gumby.toggleswitch.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\ui\jquery.validation.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\main.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\maps.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\piechart.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\plugins.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\twitter.js" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\note-single-sidebar-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\note-single-sidebar.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\note-single.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\notes-sidebar.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\notes.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\page-sidebar-alt.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\page-sidebar.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\1025px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\1500px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\1550px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\250px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\450px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\600px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\800px.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\an-screen.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo1.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo2.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo2.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo3.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo3.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo4.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo4.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo5.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo5.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo6.jpg" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logo6.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\logomarkwhite.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\screen.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\preview\screen2.png" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\projects\project-1.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\projects\project-2.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\thanks.html" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\update-log.txt" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\fonts\icons\entypo.eot" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\fonts\icons\entypo.ttf" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\fonts\icons\entypo.woff" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\jquery-1.10.1.min.map" />
+    <Content Include="Anthem\Anthem-Top-Ready\anthem-top-documentation\js\libs\jquery-2.0.2.min.map" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\core.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\list.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\path.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\fontawesome-webfont.eot" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\fontawesome-webfont.woff" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\fonts\FontAwesome.otf" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery-1.10.2.min.map" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\js\libs\jquery-2.0.2.min.map" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\projectplanner.php" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\send-email.php" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\subscribe.php" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\twitter\index.php" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\twitter\lib\tmhOAuth.php" />
+    <Content Include="Anthem\Anthem-Top-Ready\Anthem-Top\twitter\lib\tmhUtilities.php" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>25188</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:25188/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\AgencySite\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\AgencySite\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\AgencySite\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\AgencySite\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
