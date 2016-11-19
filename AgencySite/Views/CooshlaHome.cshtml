@@ -1,0 +1,274 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.CooshlaHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "CooshlaMasterPage.cshtml";
+}
+
+<div style="overflow:hidden;">
+	<header class="header" id="header">
+		<!--header-start-->
+		<div class="container">
+			<figure class="logo animated fadeInDown delay-07s">
+				<a href="#"><img src="@( Umbraco.Media(CurrentPage.logo).Url)" alt=""></a>
+			</figure>
+			<h1 class="animated fadeInDown delay-07s">@(Model.Content.GetPropertyValue<string>("title").Trim())</h1>
+			<ul class="we-create animated fadeInUp delay-1s">
+				<li>@(Model.Content.GetPropertyValue<string>("subTitle").Trim())</li>
+			</ul>
+			<a class="link animated fadeInUp delay-1s" href="#contact">@(Model.Content.GetPropertyValue<string>("buttonText").Trim())</a>
+		</div>
+
+	</header><!--header-end-->
+</div>
+<nav class="main-nav-outer" id="test">
+	<!--main-nav-start-->
+	<div class="container">
+		@{ Html.RenderPartial("MainNavigation"); }
+
+	</div>
+</nav><!--main-nav-end-->
+		
+		
+
+
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+    	<h2>Services</h2>
+    	<h6>We offer exceptional service with complimentary hugs.</h6>
+        <div class="row">
+        	<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+				
+            	@(Model.Content.GetPropertyValue<HtmlString>("workContent"))
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+            	<img src="@( Umbraco.Media(CurrentPage.workImage).Url)" alt="">
+            </figure>
+        
+        </div>
+	</div>
+</section><!--main-section-end-->
+
+
+<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+	<div class="container">
+    	<h2>Portfolio</h2>
+    	<h6>Fresh portfolio of designs that will keep you wanting more.</h6>
+      <div class="portfolioFilter">  
+        <ul class="Portfolio-nav wow fadeIn delay-02s">
+        	<li><a href="#" data-filter="*" class="current" >All</a></li>
+            <li><a href="#" data-filter=".branding" >Branding</a></li>
+            <li><a href="#" data-filter=".webdesign" >Web design</a></li>
+            <li><a href="#" data-filter=".bespoke" >Bespoke Software</a></li>
+        </ul>
+       </div> 
+        
+	</div>
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+            	<div class=" Portfolio-box webdesign">
+                	<a href="#"><img src="http://cooshla.com/media/1100/em.png" alt=""></a>	
+                	<h3>Elements</h3>
+                    <p>Branding</p>
+                </div>
+                <div class="Portfolio-box bespoke">
+                	<a href="#"><img src="http://cooshla.com/media/1102/qm.png" alt=""></a>	
+                	<h3>Quartermaster MMA</h3>
+                    <p>Bespoke Development</p>
+                </div>
+                <div class=" Portfolio-box branding webdesign">
+                	<a href="#"><img src="http://cooshla.com/media/1101/gb.png" alt=""></a>	
+                	<h3>Giles Brody</h3>
+                    <p>Web Design</p>
+                </div>
+                
+    </div>
+</section><!--main-section-end-->
+
+
+
+    <div class="c-logo-part">
+    <!--c-logo-part-start-->
+    <!--div class="container"-->
+        <ul>
+            <li><a href="#"><img src="http://cooshla.com/media/1098/cms.png?height=40" alt=""></a></li>
+            <li><a href="#"><img src="http://cooshla.com/media/1096/wp.png?height=40" alt=""></a></li>
+            <li><a href="#"><img src="http://cooshla.com/media/1097/xamagon.png?height=40" alt=""></a></li>
+            <li><a href="#"><img src="http://cooshla.com/media/1094/ms.png?height=50" alt=""></a></li>
+            <li><a href="#"><img src="http://cooshla.com/media/1095/p2.png?height=40" alt=""></a></li>
+            <li><a href="#"><img src="http://cooshla.com/media/1108/cspo.png?height=40" alt=""></a></li>
+        </ul>
+    <!--/div-->
+</div><!--c-logo-part-end-->
+
+<section class="main-section team" id="team"><!--main-section team-start-->
+	<div class="container">
+        <h2>team</h2>
+        <h6>We are a small, passionate team with a lot of digital experience. Get in touch and find out how we can help you.</h6>
+        <div class="team-leader-block clearfix">
+            
+            	@(Model.Content.GetPropertyValue<HtmlString>("team1"))
+            
+            	@(Model.Content.GetPropertyValue<HtmlString>("team2"))
+           
+            	@(Model.Content.GetPropertyValue<HtmlString>("team3"))
+        </div>
+    </div>
+</section><!--main-section team-end-->
+					
+
+  <section class="business-talking">
+        <!--business-talking-start-->
+        <div class="container">
+            <h2>Start your Project</h2>
+        </div>
+    </section><!--business-talking-end-->
+
+    <div class="container" id="ContactDiv">
+        <section class="main-section contact" id="contact">
+
+            <div class="row">
+                <h2>About You</h2>
+                <div class="wow fadeInLeft">
+                    <div class="contact-info-box address clearfix">
+                        <h3><i class="fa-tag"></i>Name:</h3>
+                        <span><input type="text" class="input-text" id="name" required /></span>
+                    </div>
+                    <div class="contact-info-box email clearfix">
+                        <h3><i class="fa-envelope"></i>Email Address:</h3>
+                        <span><input type="email"  class="input-text" id="email" required/></span>
+                    </div>
+                    <div class="contact-info-box phone clearfix">
+                        <h3><i class="fa-home"></i>Company Name:</h3>
+                        <span><input type="text" class="input-text" id="comp" /></span>
+                    </div>
+                    <div class="contact-info-box phone clearfix">
+                        <h3><i class="fa-phone"></i>Phone Number:</h3>
+                        <span><input type="tel" class="input-text" id="tel" /></span>
+                    </div>
+
+                    <div class="contact-info-box phone clearfix">
+                        <h3><i class="fa-globe"></i>Current Url:</h3>
+                        <span><input type="url" class="input-text" id="url"/></span>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section nopadding" id="project">
+
+            <div class="row">
+                <h2>About Your Project</h2>
+                <div class=" wow fadeInLeft">
+                    <div class="contact-info-box address clearfix">
+                        <h3><i class="fa-pencil"></i>Please tell us a little about your project:</h3>
+                        <span><textarea class="input-text text-area" id="details"></textarea></span>
+                    </div>
+                    <div class="contact-info-box email clearfix">
+                        <h3><i class="fa-pencil"></i>Please give us some examples of other websites or brands you like:</h3>
+                        <span><textarea class="input-text text-area" id="branding" ></textarea></span>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section nopadding" id="details">
+
+            <div class="row">
+                <h2>Project Details</h2>
+
+                <div class=" wow fadeInLeft">
+                    <div class="contact-info-box address clearfix">
+                        <h3><i class="fa-dollar"></i>Your Budget:</h3>
+                        <span>
+                            <input type="radio" name="budget" value="<5k" checked> Under £5,000<br/>
+                            <input type="radio" name="budget" value="5k-10k"> £5,000 - £10,000<br/>
+                            <input type="radio" name="budget" value="10k-15k"> £10,000 - £15,000<br />
+                            <input type="radio" name="budget" value="15k+"> £15,000+<br />
+                        </span>
+                    </div>
+                    <div class="contact-info-box email clearfix">
+                        <h3><i class="fa-calendar-o"></i>Your Timeline</h3>
+                        <span>
+                            <input type="radio" name="timeline" value="<6w" checked> Under 6 weeks<br />
+                            <input type="radio" name="timeline" value="6w-8w"> 6 - 8 weeks<br />
+                            <input type="radio" name="timeline" value="<3m"> Up to 3 months<br />
+                            <input type="radio" name="timeline" value="3m+"> More than 3 months<br />
+
+                        </span>
+                    </div>
+
+                </div>
+							<center>
+                <input class="input-btn" type="submit" value="Start Your Project">
+</center>
+            </div>
+        </section>
+</div>
+
+<div id="ThankYouDiv" class="container">
+    <h2>Thanks for your enquiry</h2>
+
+</div>
+
+
+                                                 <script>
+
+
+    $(document).ready(function (e) {
+
+        $("#ThankYouDiv").hide();
+        $('.input-btn').click(function (event) {
+
+
+			console.log("triggered");
+			var JSONData = new Object();
+			console.log("fetching");
+
+            if ($("#name").val() != "" && $("#email").val() != "") {
+                var JSONData = new Object();
+                JSONData.name = $("#name").val();
+                JSONData.email = $("#email").val();
+                JSONData.company = $("#comp").val()
+                JSONData.phone = $("#tel").val();
+                JSONData.url = $("#url").val();
+                JSONData.details = $("#details").val();
+                JSONData.branding = $("#branding").val();
+                JSONData.budget = $("input[type='radio'][name='budget']:checked").val()
+                JSONData.time = $("input[type='radio'][name='timeline']:checked").val()
+			console.log("posting");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/umbraco/api/projectplan/post",
+                    data: JSON.stringify(JSONData),// now data come in this function
+                    contentType: "application/json; charset=utf-8",
+                    crossDomain: true,
+                    dataType: "json",
+                    success: function (data, status, jqXHR) {
+
+                        alert("success");// write success in " "
+                        console.log(JSONData);
+
+                        $("#ContactDiv").hide();
+
+                        $("#ThankYouDiv").show();
+                    },
+
+                    error: function (jqXHR, status) {
+                        // error handler
+                        console.log(jqXHR);
+                        alert('fail' + status.code);
+                    }
+                });
+            }
+			else
+			{
+				alert("please enter a valid name and email");
+			}
+			console.log("end");
+        });
+
+    });
+</script>
+<script src="~/Scripts/toastr.js"></script>
