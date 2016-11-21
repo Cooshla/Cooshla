@@ -1198,7 +1198,7 @@ abbr { text-transform: none; }
 .sixteen.colgrid .row .fourteen.centered { margin-left: 6.38298%; }
 .sixteen.colgrid .row .fifteen.centered { margin-left: 3.19149%; }
 
-img, object, embed { max-width: 100%; height: 90px; }
+img, object, embed { max-width: 100%; height: auto; }
 
 img { -ms-interpolation-mode: bicubic; }
 
