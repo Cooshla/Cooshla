@@ -36,348 +36,12 @@ using  Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Blog Post</summary>
-	[PublishedContentModel("BlogPost")]
-	public partial class BlogPost : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "BlogPost";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public BlogPost(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPost, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-
-		///<summary>
-		/// Introduction
-		///</summary>
-		[ImplementPropertyType("introduction")]
-		public string Introduction
-		{
-			get { return this.GetPropertyValue<string>("introduction"); }
-		}
-	}
-
-	/// <summary>Blog Post Repository</summary>
-	[PublishedContentModel("BlogPostRepository")]
-	public partial class BlogPostRepository : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "BlogPostRepository";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public BlogPostRepository(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPostRepository, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Hide in bottom navigation?
-		///</summary>
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide
-		{
-			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
-		}
-	}
-
-	/// <summary>Home</summary>
-	[PublishedContentModel("Home")]
-	public partial class Home : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Home";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Home(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-
-		///<summary>
-		/// Site Description
-		///</summary>
-		[ImplementPropertyType("siteDescription")]
-		public string SiteDescription
-		{
-			get { return this.GetPropertyValue<string>("siteDescription"); }
-		}
-
-		///<summary>
-		/// Site Logo
-		///</summary>
-		[ImplementPropertyType("siteLogo")]
-		public object SiteLogo
-		{
-			get { return this.GetPropertyValue("siteLogo"); }
-		}
-
-		///<summary>
-		/// Site Title
-		///</summary>
-		[ImplementPropertyType("siteTitle")]
-		public string SiteTitle
-		{
-			get { return this.GetPropertyValue<string>("siteTitle"); }
-		}
-	}
-
-	/// <summary>Landing Page</summary>
-	[PublishedContentModel("LandingPage")]
-	public partial class LandingPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "LandingPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public LandingPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<LandingPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-
-		///<summary>
-		/// Hide in bottom navigation?
-		///</summary>
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide
-		{
-			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
-		}
-	}
-
-	/// <summary>Text Page</summary>
-	[PublishedContentModel("TextPage")]
-	public partial class TextPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "TextPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public TextPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TextPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Content
-		///</summary>
-		[ImplementPropertyType("content")]
-		public Newtonsoft.Json.Linq.JToken Content
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("content"); }
-		}
-	}
-
-	/// <summary>Cooshla Home</summary>
-	[PublishedContentModel("cooshlaHome")]
-	public partial class CooshlaHome : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "cooshlaHome";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public CooshlaHome(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<CooshlaHome, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Button
-		///</summary>
-		[ImplementPropertyType("button")]
-		public Newtonsoft.Json.Linq.JArray Button
-		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JArray>("button"); }
-		}
-
-		///<summary>
-		/// Button Text
-		///</summary>
-		[ImplementPropertyType("buttonText")]
-		public string ButtonText
-		{
-			get { return this.GetPropertyValue<string>("buttonText"); }
-		}
-
-		///<summary>
-		/// Logo
-		///</summary>
-		[ImplementPropertyType("logo")]
-		public string Logo
-		{
-			get { return this.GetPropertyValue<string>("logo"); }
-		}
-
-		///<summary>
-		/// SubTitle
-		///</summary>
-		[ImplementPropertyType("subTitle")]
-		public string SubTitle
-		{
-			get { return this.GetPropertyValue<string>("subTitle"); }
-		}
-
-		///<summary>
-		/// Team1
-		///</summary>
-		[ImplementPropertyType("team1")]
-		public IHtmlString Team1
-		{
-			get { return this.GetPropertyValue<IHtmlString>("team1"); }
-		}
-
-		///<summary>
-		/// Team2
-		///</summary>
-		[ImplementPropertyType("team2")]
-		public IHtmlString Team2
-		{
-			get { return this.GetPropertyValue<IHtmlString>("team2"); }
-		}
-
-		///<summary>
-		/// Team3
-		///</summary>
-		[ImplementPropertyType("team3")]
-		public IHtmlString Team3
-		{
-			get { return this.GetPropertyValue<IHtmlString>("team3"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("title")]
-		public string Title
-		{
-			get { return this.GetPropertyValue<string>("title"); }
-		}
-
-		///<summary>
-		/// Work Content
-		///</summary>
-		[ImplementPropertyType("workContent")]
-		public IHtmlString WorkContent
-		{
-			get { return this.GetPropertyValue<IHtmlString>("workContent"); }
-		}
-
-		///<summary>
-		/// Work Image
-		///</summary>
-		[ImplementPropertyType("workImage")]
-		public string WorkImage
-		{
-			get { return this.GetPropertyValue<string>("workImage"); }
-		}
-	}
-
-	/// <summary>Anthem Home</summary>
-	[PublishedContentModel("anthemHome")]
+	/// <summary>AnthemHome</summary>
+	[PublishedContentModel("AnthemHome")]
 	public partial class AnthemHome : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemHome";
+		public new const string ModelTypeAlias = "AnthemHome";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -398,25 +62,25 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Blog Posts
+		/// Blog posts: Blog posts.
 		///</summary>
 		[ImplementPropertyType("blogPosts")]
-		public string BlogPosts
+		public object BlogPosts
 		{
-			get { return this.GetPropertyValue<string>("blogPosts"); }
+			get { return this.GetPropertyValue("blogPosts"); }
 		}
 
 		///<summary>
-		/// Projects
+		/// Projects: Projects.
 		///</summary>
 		[ImplementPropertyType("projects")]
-		public string Projects
+		public object Projects
 		{
-			get { return this.GetPropertyValue<string>("projects"); }
+			get { return this.GetPropertyValue("projects"); }
 		}
 
 		///<summary>
-		/// Section 2 Description
+		/// Section 2 Description: Section 2 Description.
 		///</summary>
 		[ImplementPropertyType("section2Description")]
 		public string Section2Description
@@ -425,7 +89,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Section 2 Folio Text
+		/// Section 2 Folio Text: Section 2 Folio Text.
 		///</summary>
 		[ImplementPropertyType("section2FolioText")]
 		public string Section2FolioText
@@ -434,7 +98,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Section 2 Header
+		/// Section 2 Header: Section 2 Header.
 		///</summary>
 		[ImplementPropertyType("section2Header")]
 		public string Section2Header
@@ -443,7 +107,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Section 2 subheader
+		/// Section 2 Subheading: Section 2 Subheading.
 		///</summary>
 		[ImplementPropertyType("section2Subheader")]
 		public string Section2Subheader
@@ -452,16 +116,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Service 1 Content
+		/// Service 1 Content: Service 1 Content.
 		///</summary>
 		[ImplementPropertyType("service1Content")]
-		public IHtmlString Service1Content
+		public string Service1Content
 		{
-			get { return this.GetPropertyValue<IHtmlString>("service1Content"); }
+			get { return this.GetPropertyValue<string>("service1Content"); }
 		}
 
 		///<summary>
-		/// Service 1 Header
+		/// Service 1 Header: Service 1 Header.
 		///</summary>
 		[ImplementPropertyType("service1Header")]
 		public string Service1Header
@@ -470,16 +134,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Service 2 Content
+		/// Service 2 Content: Service 2 Content.
 		///</summary>
 		[ImplementPropertyType("service2Content")]
-		public IHtmlString Service2Content
+		public string Service2Content
 		{
-			get { return this.GetPropertyValue<IHtmlString>("service2Content"); }
+			get { return this.GetPropertyValue<string>("service2Content"); }
 		}
 
 		///<summary>
-		/// Service 2  Header
+		/// Service 2 Header: Service 2 Header.
 		///</summary>
 		[ImplementPropertyType("service2Header")]
 		public string Service2Header
@@ -488,16 +152,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Service 3 Content
+		/// Service 3 Content: Service 3 Content.
 		///</summary>
 		[ImplementPropertyType("service3Content")]
-		public IHtmlString Service3Content
+		public string Service3Content
 		{
-			get { return this.GetPropertyValue<IHtmlString>("service3Content"); }
+			get { return this.GetPropertyValue<string>("service3Content"); }
 		}
 
 		///<summary>
-		/// Service 3 Header
+		/// Service 3 Header: Service 3 Header.
 		///</summary>
 		[ImplementPropertyType("service3Header")]
 		public string Service3Header
@@ -506,16 +170,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 1
+		/// Slide 1: Slide 1.
 		///</summary>
 		[ImplementPropertyType("slide1")]
-		public string Slide1
+		public object Slide1
 		{
-			get { return this.GetPropertyValue<string>("slide1"); }
+			get { return this.GetPropertyValue("slide1"); }
 		}
 
 		///<summary>
-		/// Slide 1 Heading
+		/// Slide 1 Heading: Slide 1 Heading.
 		///</summary>
 		[ImplementPropertyType("slide1Heading")]
 		public string Slide1Heading
@@ -524,16 +188,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 1 Link
-		///</summary>
-		[ImplementPropertyType("slide1Link")]
-		public object Slide1Link
-		{
-			get { return this.GetPropertyValue("slide1Link"); }
-		}
-
-		///<summary>
-		/// Slide 1 Subheading
+		/// Slide 1 Subheading: Slide 1 Subheading.
 		///</summary>
 		[ImplementPropertyType("slide1Subheading")]
 		public string Slide1Subheading
@@ -542,16 +197,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 2
+		/// Slide 2: Slide 2.
 		///</summary>
 		[ImplementPropertyType("slide2")]
-		public string Slide2
+		public object Slide2
 		{
-			get { return this.GetPropertyValue<string>("slide2"); }
+			get { return this.GetPropertyValue("slide2"); }
 		}
 
 		///<summary>
-		/// Slide 2 Heading
+		/// Slide 2 Heading: Slide 2 Heading.
 		///</summary>
 		[ImplementPropertyType("slide2Heading")]
 		public string Slide2Heading
@@ -560,16 +215,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 2 Link
-		///</summary>
-		[ImplementPropertyType("slide2Link")]
-		public object Slide2Link
-		{
-			get { return this.GetPropertyValue("slide2Link"); }
-		}
-
-		///<summary>
-		/// Slide 2 Subheading
+		/// Slide 2 Subheading: Slide 2 Subheading.
 		///</summary>
 		[ImplementPropertyType("slide2Subheading")]
 		public string Slide2Subheading
@@ -578,16 +224,16 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 3
+		/// Slide 3: Slide 3.
 		///</summary>
 		[ImplementPropertyType("slide3")]
-		public string Slide3
+		public object Slide3
 		{
-			get { return this.GetPropertyValue<string>("slide3"); }
+			get { return this.GetPropertyValue("slide3"); }
 		}
 
 		///<summary>
-		/// Slide 3 Heading
+		/// Slide 3 Heading: Slide 3Heading.
 		///</summary>
 		[ImplementPropertyType("slide3Heading")]
 		public string Slide3Heading
@@ -596,346 +242,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Slide 3 Link
-		///</summary>
-		[ImplementPropertyType("slide3Link")]
-		public object Slide3Link
-		{
-			get { return this.GetPropertyValue("slide3Link"); }
-		}
-
-		///<summary>
-		/// Slide 3 Subheading
+		/// Slide 3 Subheading: Slide 3 Subheading.
 		///</summary>
 		[ImplementPropertyType("slide3Subheading")]
 		public string Slide3Subheading
 		{
 			get { return this.GetPropertyValue<string>("slide3Subheading"); }
-		}
-	}
-
-	/// <summary>Anthem Master</summary>
-	[PublishedContentModel("anthemMaster")]
-	public partial class AnthemMaster : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemMaster";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemMaster(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemMaster, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// ContactEmail
-		///</summary>
-		[ImplementPropertyType("contactEmail")]
-		public string ContactEmail
-		{
-			get { return this.GetPropertyValue<string>("contactEmail"); }
-		}
-
-		///<summary>
-		/// Facebook
-		///</summary>
-		[ImplementPropertyType("facebook")]
-		public string Facebook
-		{
-			get { return this.GetPropertyValue<string>("facebook"); }
-		}
-
-		///<summary>
-		/// FooterBlurb
-		///</summary>
-		[ImplementPropertyType("footerBlurb")]
-		public string FooterBlurb
-		{
-			get { return this.GetPropertyValue<string>("footerBlurb"); }
-		}
-
-		///<summary>
-		/// GooglePlus
-		///</summary>
-		[ImplementPropertyType("googlePlus")]
-		public string GooglePlus
-		{
-			get { return this.GetPropertyValue<string>("googlePlus"); }
-		}
-
-		///<summary>
-		/// LinkedIn
-		///</summary>
-		[ImplementPropertyType("linkedIn")]
-		public string LinkedIn
-		{
-			get { return this.GetPropertyValue<string>("linkedIn"); }
-		}
-
-		///<summary>
-		/// PhoneNumber
-		///</summary>
-		[ImplementPropertyType("phoneNumber")]
-		public string PhoneNumber
-		{
-			get { return this.GetPropertyValue<string>("phoneNumber"); }
-		}
-
-		///<summary>
-		/// Twitter
-		///</summary>
-		[ImplementPropertyType("twitter")]
-		public string Twitter
-		{
-			get { return this.GetPropertyValue<string>("twitter"); }
-		}
-	}
-
-	/// <summary>Anthem Portfolio</summary>
-	[PublishedContentModel("anthemPortfolio")]
-	public partial class AnthemPortfolio : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemPortfolio";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemPortfolio(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemPortfolio, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Description
-		///</summary>
-		[ImplementPropertyType("description")]
-		public string Description
-		{
-			get { return this.GetPropertyValue<string>("description"); }
-		}
-
-		///<summary>
-		/// Preview Image
-		///</summary>
-		[ImplementPropertyType("previewImage")]
-		public string PreviewImage
-		{
-			get { return this.GetPropertyValue<string>("previewImage"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("title")]
-		public string Title
-		{
-			get { return this.GetPropertyValue<string>("title"); }
-		}
-	}
-
-	/// <summary>Anthem Portfolio Details</summary>
-	[PublishedContentModel("anthemPortfolioDetails")]
-	public partial class AnthemPortfolioDetails : AnthemPortfolio
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemPortfolioDetails";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemPortfolioDetails(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemPortfolioDetails, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-	}
-
-	/// <summary>Anthem Blog Page</summary>
-	[PublishedContentModel("anthemBlogPage")]
-	public partial class AnthemBlogPage : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemBlogPage";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemBlogPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemBlogPage, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-	}
-
-	/// <summary>Anthem Blog Details</summary>
-	[PublishedContentModel("blogDetails")]
-	public partial class BlogDetails : AnthemBlogPage
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "blogDetails";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public BlogDetails(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogDetails, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Description
-		///</summary>
-		[ImplementPropertyType("description")]
-		public string Description
-		{
-			get { return this.GetPropertyValue<string>("description"); }
-		}
-
-		///<summary>
-		/// Preview Image
-		///</summary>
-		[ImplementPropertyType("previewImage")]
-		public string PreviewImage
-		{
-			get { return this.GetPropertyValue<string>("previewImage"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("title")]
-		public string Title
-		{
-			get { return this.GetPropertyValue<string>("title"); }
-		}
-	}
-
-	/// <summary>Anthem - About Us</summary>
-	[PublishedContentModel("anthemAboutUs")]
-	public partial class AnthemAboutUs : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemAboutUs";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemAboutUs(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemAboutUs, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-	}
-
-	/// <summary>Anthem - Services</summary>
-	[PublishedContentModel("anthemServices")]
-	public partial class AnthemServices : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemServices";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemServices(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemServices, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-	}
-
-	/// <summary>Anthem - Contact Us</summary>
-	[PublishedContentModel("anthemContactUs")]
-	public partial class AnthemContactUs : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "anthemContactUs";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public AnthemContactUs(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AnthemContactUs, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 	}
 

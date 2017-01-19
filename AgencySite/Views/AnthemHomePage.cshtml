@@ -1,6 +1,7 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿
+@inherits Vega.USiteBuilder.UmbracoTemplatePageBase<AgencySite.DocumentTypes.AnthemHome>
 @{
-    Layout = "AnthemThemeTopMaster.cshtml";
+    Layout = "~/views/AnthemThemeTopMaster.cshtml";
 }
 
 <!-- first block -->
@@ -17,14 +18,14 @@
 				<!-- first slide -->
 				<li>
 				<!-- slide background image -->
-				<img src="@Umbraco.Media(CurrentPage.Slide1).Url" alt="">
+				<img src="" alt="">
 				<div class="black-tint">
 				</div>
 				<div class="slide-caption dark text-center">
 					<!-- add class do-fade to apply fade animation on scroll -->
 					<div class="row large do-fade">
-						<h1 class="bold large-font">@CurrentPage.Slide1Heading</h1>
-						<h2>@CurrentPage.Slide1Subheading</h2>
+						<h1 class="bold large-font">@Model.Slide1Heading</h1>
+						<h2>@Model.Slide1Subheading</h2>
 						<div class="midtoppadding">
 							<a href="~/our-work" class="white line-button"><span>Read More</span></a>
 						</div>
@@ -37,13 +38,13 @@
 				<!-- second slide -->
 				<li>
 				<!-- slide background image -->
-				<img src="@Umbraco.Media(CurrentPage.Slide2).Url" alt="">
+				<img src="" alt="">
 				<div class="slide-caption dark">
 					<!-- add class do-fade to apply fade animation on scroll -->
 					<div class="row large text-center do-fade">
-						<h1 class="block-heading">@CurrentPage.Slide2Heading</h1>
+						<h1 class="block-heading">@Model.Slide2Heading</h1>
 						<div class="eight columns centered">
-                            <h2>@CurrentPage.Slide2Subheading</h2>
+                            <h2>@Model.Slide2Subheading</h2>
 							<div class="midtoppadding">
 								<a href="~/about-us" class="white line-button"><span>READ ABOUT US</span></a>
 							</div>
@@ -54,15 +55,15 @@
 				<!-- third slide -->
 				<li>
 					<!-- slide background image -->
-					<img src="@Umbraco.Media(CurrentPage.Slide3).Url" alt="">
+					<img src="" alt="">
 					<div class="black-tint">
 					</div>
 					<div class="slide-caption dark">
 						<!-- add class do-fade to apply fade animation on scroll -->
 						<div class="row large text-center do-fade">
-							<h1 class="block-heading">@CurrentPage.Slide3Heading</h1>
+							<h1 class="block-heading">@Model.Slide3Heading</h1>
 							<div class="eight columns centered">
-                                <h2>@CurrentPage.Slide2Subheading</h2>
+                                <h2>@Model.Slide3Subheading</h2>
 								<div class="midtoppadding">
 									<a href="~/services" class="white line-button"><span>VIEW OUR SERVICES</span></a>
 								</div>
@@ -87,14 +88,14 @@
 				<!-- first section / info -->
 				<section class="content-block">
 				<div class="row content-heading text-center">
-					<h6>@CurrentPage.section2Header</h6>
-					<h3>@CurrentPage.section2Subheader</h3>
+					<h6>@Model.section2Header</h6>
+					<h3>@Model.section2Subheader</h3>
 					<span class="border"></span>
 				</div>
 				<div class="row">
 					<div class="ten columns centered text-center">
 						<p class="intro">
-                            @CurrentPage.section2Description
+                            @Model.section2Description
 						</p>
 					</div>
 				</div>
@@ -105,13 +106,15 @@
 				<ul class="grid times-four alt" id="projects">
 
                     @{
-                        var bannerList = CurrentPage.projects.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                        var bannerCollection = Umbraco.Content(bannerList);
-                        
+                        if (Model.projects != null)
+                        {
+                            var bannerList = Model.projects.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                            var bannerCollection = Umbraco.Content(bannerList);
+
                             foreach (var item in bannerCollection)
                             {
 
-    
+
                             <li class="grid-item">
                                 <div class="grid-project">
                                     <!-- project image -->
@@ -129,11 +132,12 @@
                                 </div>
                             </li>
 
+                            }
                         }
 
-                    }
+                        }
 
-                    
+
 					<!-- project -->
 					
 
@@ -147,7 +151,7 @@
 				<div class="action-block purple">
 					<div class="row">
 						<div class="twelve columns text-center">
-							<h3 class="white-text">@CurrentPage.section2FolioText <a href="our-work" class="white line-button"><span>View All Work</span></a>
+							<h3 class="white-text">@Model.section2FolioText <a href="our-work" class="white line-button"><span>View All Work</span></a>
 							</h3>
 						</div>
 					</div>
@@ -163,8 +167,8 @@
 								<i class="fa fa-desktop"></i>
 							</div>
 							<div class="icon-info">
-								<h5 class="bold">@CurrentPage.Service1Header</h5>
-								@CurrentPage.Service1Content
+								<h5 class="bold">@Model.Service1Header</h5>
+								@Model.Service1Content
 							</div>
 						</div>
 					</div>
@@ -176,8 +180,8 @@
 								<i class="fa fa-pencil"></i>
 							</div>
 							<div class="icon-info">
-                                <h5 class="bold">@CurrentPage.Service2Header</h5>
-                                @CurrentPage.Service2Content
+                                <h5 class="bold">@Model.Service2Header</h5>
+                                @Model.Service2Content
 							</div>
 						</div>
 					</div>
@@ -189,8 +193,8 @@
 								<i class="fa fa-flag"></i>
 							</div>
 							<div class="icon-info">
-                                <h5 class="bold">@CurrentPage.Service3Header</h5>
-                                @CurrentPage.Service3Content
+                                <h5 class="bold">@Model.Service3Header</h5>
+                                @Model.Service3Content
 							</div>
 						</div>
 					</div>
@@ -319,11 +323,14 @@
 						<!-- first post -->
 
                         @{
-                            var BlogList = CurrentPage.blogPosts.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                            var BlogCollection = Umbraco.Content(BlogList);
-
-                            foreach (var item in BlogCollection)
+                            if (Model.blogPosts != null)
                             {
+
+                                var BlogList = Model.blogPosts.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                var BlogCollection = Umbraco.Content(BlogList);
+
+                                foreach (var item in BlogCollection)
+                                {
                                 <li class="grid-item">
                                     <div class="grid-post">
                                         <!-- project image -->
@@ -344,11 +351,12 @@
                                     </div>
                                 </li>
 
+                                    }
+                                }
+
                             }
 
-                        }
 
-						
 
 					</ul>
 					<div class="clear">
