@@ -1,0 +1,57 @@
+﻿@inherits Vega.USiteBuilder.UmbracoTemplatePageBase<AgencySite.DocumentTypes.AnthemGenericContent>
+@{
+    Layout = "~/views/AnthemThemeTopMaster.cshtml";
+}
+<section class="img-section dark page-header" style="background-image:url(/media/1152/about.png)">
+    <div class="content-block">
+        <!-- #crumbs for page title bar and top navigation -->
+        <div id="crumbs" class="abs dark">
+            <div class="row large">
+                <!-- page title/statement -->
+                <div class="six columns">
+                    <h6 class="sub-heading"><a href=""><span>HOME</span></a>&nbsp; / &nbsp; <a href=""><span>OUR LATEST NOTES</span></a>&nbsp; / &nbsp;ENVATO'S MOST WANTED</h6>
+                </div>
+                <div class="six columns text-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="grey stripe-bg">
+    <!-- post content -->
+    <div class="two-third" style="width:100%;">
+        <div id="single-post">
+            <!-- begin posts -->
+            <ul class="grid alt-posts" id="posts">
+                <li class="post">
+                    <div class="post-info">
+
+                        <!-- post title -->
+                        <center>
+                            <h1 class="grid-title">@Model.Header</h1>
+                            <div class="post-meta">
+                                <span></span>
+                            </div>
+
+                        </center>
+                        <div class="post-content">
+                            @Model.Content
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- call to acton block -->
+<div class="action-block purple">
+    <div class="row">
+        <div class="twelve columns text-center">
+            <h3 class="white-text">
+                <a href="contact-us" class="white line-button"><span>Get in touch today</span></a>
+            </h3>
+        </div>
+    </div>
+</div>

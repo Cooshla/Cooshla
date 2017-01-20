@@ -1,4 +1,58 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Vega.USiteBuilder.UmbracoTemplatePageBase<AgencySite.DocumentTypes.AnthemPortfolio>
 @{
-	Layout = null;
+    Layout = "~/views/AnthemThemeTopMaster.cshtml";
 }
+
+
+<div class="first-block">
+</div>
+
+<section class="midpadding work white">
+    <div class="row large">
+        <ul class="grid filter times-three basic" id="projects">
+
+
+
+
+            @{
+                if (Model.Portfolio != null)
+                {
+
+                    var BlogList = Model.Portfolio.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    var BlogCollection = Umbraco.Content(BlogList);
+
+                    foreach (var item in BlogCollection)
+                    {
+
+                        <li class="grid-item design development">
+                            <div class="grid-project">
+                                <!-- project image -->
+                                <div class="img-box">
+                                    <img src="preview/600px.png" alt="project" class="zoom-on-hover">
+                                </div>
+                                <div class="project-info">
+                                    <!-- folio single link -->
+                                    <a href="@item.Url" title="View Project">
+                                        <h1 class="grid-title">@item.Title</h1>
+                                        <h6 class="project-cat">@item.Tag</h6>
+                                        <!-- project index -->
+                                        <div class="project-index">
+                                            <span class="number">01</span><i class="fa fa-link"></i>
+                                        </div>
+                                    </a>
+                                    <p>
+                                        @item.ShortDescription
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                    }
+                }
+            }
+        </ul>
+        <!-- clear floats -->
+        <div class="clear">
+        </div>
+    </div>
+</section>

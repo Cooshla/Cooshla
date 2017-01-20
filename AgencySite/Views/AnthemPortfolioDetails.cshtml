@@ -1,4 +1,63 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Vega.USiteBuilder.UmbracoTemplatePageBase<AgencySite.DocumentTypes.AnthemPortfolioDetails>
 @{
-	Layout = null;
+    Layout = "~/views/AnthemThemeTopMaster.cshtml";
 }
+
+<!-- first-block-->
+<div class="first-block">
+</div>
+<!-- #crumbs for page title bar and top navigation -->
+<div id="crumbs" class="black dark">
+    <div class="row large">
+        <!-- page title -->
+        <div class="six columns">
+            <h6 class="sub-heading"><a href=""><span>HOME</span></a>&nbsp; / &nbsp; <a href=""><span>OUR LATEST WORK</span></a>@Model.Title</h6>
+        </div>
+        <div class="six columns text-right">
+        </div>
+    </div>
+</div>
+<!-- begin project -->
+<div id="single-project">
+    <div class="work grey stripe-bg">
+        <!-- project slider -->
+        <div class="two-third">
+            <div class="single-project">
+                <div class="flexslider full-slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="preview/1025px.png" alt="some-image">
+                        </li>
+                        <li>
+                            <img src="preview/1025px.png" alt="some-image">
+                        </li>
+                        <li>
+                            <img src="preview/1025px.png" alt="some-image">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- .two-third -->
+        <!-- project info -->
+        <aside class="one-third grey">
+            <div id="sidebar">
+                <div class="project-detail">
+                    <h5 class="stripe-heading">@Model.Title</h5>
+                    <div class="project-content">
+                        
+                        @Model.Content
+
+                        <ul class="project-meta">
+                            <li><i class="fa fa-bookmark"></i>@Model.Client</li>
+                            <li><i class="fa fa-tag"></i>@Model.Tag</li>
+                            <li class="link"><i class="fa fa-link"></i><a href="@Model.Link" target="_blank">@Model.Link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="clear">
+        </div>
+    </div>
+</div>

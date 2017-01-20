@@ -1,0 +1,64 @@
+﻿@inherits Vega.USiteBuilder.UmbracoTemplatePageBase<AgencySite.DocumentTypes.AnthemBlogDetails>
+@{
+    Layout = "~/views/AnthemThemeTopMaster.cshtml";
+}
+
+<!-- first-block -->
+<div class="first-block">
+</div>
+<!-- page header / img section-->
+<section class="img-section dark page-header" style="background-image:url(preview/1550px.png);">
+    <div class="content-block">
+        <!-- #crumbs for page title bar and top navigation -->
+        <div id="crumbs" class="abs dark">
+            <div class="row large">
+                <!-- page title/statement -->
+                <div class="six columns">
+                    <h6 class="sub-heading"><a href=""><span>HOME</span></a>&nbsp; / &nbsp; <a href=""><span>OUR LATEST NOTES</span></a>@Model.Title</h6>
+                </div>
+                <div class="six columns text-right">
+                    <!-- post navigation -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="grey stripe-bg">
+    <!-- post content -->
+    <div class="two-third">
+        <div id="single-post">
+            <!-- begin posts -->
+            <ul class="grid alt-posts" id="posts">
+                <li class="post">
+                    <div class="post-info">
+                        <!-- post title -->
+                        <h1 class="grid-title">Envato's Most Wanted: Non-Profit Site Templates - $4,000</h1>
+                        <div class="post-meta">
+                            <span>Posted on: <span>@Model.CreateDate</span></span><span>Posted under: <span>@Model.Tag</span></span>
+                        </div>
+                        <div class="post-content">
+                           @Model.Content
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--sidebar -->
+    <aside class="one-third grey">
+        <div id="sidebar">
+            <!-- category widget -->
+            <div class="widget">
+               
+            </div>
+            <!-- recent posts widget -->
+            <div class="widget">
+               
+            </div>
+        </div>
+    </aside>
+    <!-- clear floats -->
+    <div class="clear">
+    </div>
+</section>

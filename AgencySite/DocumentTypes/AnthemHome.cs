@@ -1,15 +1,9 @@
-﻿using AgencySite.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Umbraco.Core.Models;
-using Umbraco.Web.Models;
+﻿using System.Collections.Generic;
 using Vega.USiteBuilder;
 
 namespace AgencySite.DocumentTypes
 {
-    [DocumentType(IconUrl = "house.png", Description = "Home page document type.", AllowAtRoot =true, DefaultTemplate ="AnthemHomePage", AllowedTemplates = new string[] { "AnthemHomePage" })]
+    [DocumentType(IconUrl = "house.png", Description = "Home page document type.", AllowAtRoot = true, DefaultTemplate ="AnthemHomePage", AllowedTemplates = new string[] { "AnthemHomePage" })]
     public class AnthemHome : Vega.USiteBuilder.DocumentTypeBase
     {
         public AnthemHome() 
