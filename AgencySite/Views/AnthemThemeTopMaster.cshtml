@@ -351,6 +351,51 @@
 	});
 	})(jQuery);
     </script>
+
+
+
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+    </script>
+    <script src="assets/js/maps.js">
+    </script>
+    <!-- map / add you location longitude latitude values  -->
+    <script type="text/javascript">
+//<![CDATA[
+    $(document).ready(function(){
+    map = new GMaps({
+    div: '#map',
+    lat: 48.8584,
+    lng: 2.2946,
+    });
+    map.addMarker({
+    lat: 48.8584,
+    lng: 2.2946,
+    title: 'Anthem Html Template',
+    click: function(e){
+    if(console.log)
+    console.log(e);
+    alert('You clicked in this marker');
+    }
+    });
+    });
+    //]]>
+    </script>
+    <!-- contact form -->
+    <script>
+(function($) {
+  "use strict";
+	$('#contact-form #submit').click(function(){
+	$.post("send-email.php", $("#contact-form").serialize(),  function(response) {
+	$('#contact-form')[0].reset();
+	$('#email-msg').fadeIn('slow').html(response);
+	$('#email-msg').delay('7000').fadeOut('slow');
+	});
+	return false;
+	});
+	})(jQuery);
+    </script>
+
     <!-- only include animate.js on
     pages you want to use animations on
     <script src="~/assets/js/animate.js"></script> -->
